@@ -355,6 +355,7 @@
 "Assets/Course Library/_Source_Files/Scripts/DestroyAfterDelay.cs"
 "Assets/Scripts/DifficultyButton.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/Sound Manager.cs"
 "Assets/Scripts/Target.cs"
 -langversion:9.0
 

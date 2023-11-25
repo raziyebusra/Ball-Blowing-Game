@@ -26,13 +26,10 @@ public class Target : MonoBehaviour
         targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
 
         transform.position = RandomSpawnPos();
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-
     }
     private void OnMouseDown()
     {
@@ -48,7 +45,7 @@ public class Target : MonoBehaviour
         Destroy(gameObject);
         if (!gameObject.CompareTag("Bad"))
         {
-            gameManager.GameOver();
+            gameManager.UpdateLives();
         }
 
     }
