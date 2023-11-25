@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI livesText;
+    public GameObject pauseMenu;
 
     public Button restartButton;
     public GameObject titleScreen;
@@ -26,6 +27,17 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isGameActive)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
     }
 
     IEnumerator SpawnTarget()
@@ -74,5 +86,18 @@ public class GameManager : MonoBehaviour
         lives++;
         UpdateLives();
         titleScreen.gameObject.SetActive(false);
+    }
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isGameActive = true;
+    }
+    void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isGameActive = false;
+
     }
 }

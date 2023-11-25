@@ -5,13 +5,26 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
+    private GameManager gameManager;
+
     [SerializeField] Slider volumeSlider;
     void Start()
     {
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
         if (!PlayerPrefs.HasKey("musicVolume"))
         {
             PlayerPrefs.SetFloat("musicVolume", 1);
             Load();
+        }
+    }
+
+    void Update()
+    {
+        if (gameManager.isGameActive)
+        {
+            volumeSlider.gameObject.SetActive(false);
+
         }
     }
     public void ChangeVolume()
