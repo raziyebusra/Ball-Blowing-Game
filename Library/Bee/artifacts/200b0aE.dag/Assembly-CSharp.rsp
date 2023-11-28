@@ -353,6 +353,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.10f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.10f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Course Library/_Source_Files/Scripts/DestroyAfterDelay.cs"
+"Assets/Scripts/ClickAndSwipe.cs"
 "Assets/Scripts/DifficultyButton.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Sound Manager.cs"
